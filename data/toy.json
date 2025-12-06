@@ -37,5 +37,31 @@
     "inStock": true,
     "imgUrl": "https://robohash.org/TOY-289?set=set4",
     "labels": []
+  },
+  {
+    "name": "TOY-83",
+    "price": 63,
+    "_id": "eMySN",
+    "owner": {
+      "_id": "0fgfr",
+      "fullname": "sasa sasa"
+    },
+    "createdAt": 1765046518129,
+    "inStock": true,
+    "imgUrl": "https://robohash.org/TOY-83?set=set4",
+    "labels": []
+  },
+  {
+    "name": "",
+    "price": 50,
+    "_id": "Rx2SU",
+    "owner": {
+      "_id": "0fgfr",
+      "fullname": "sasa sasa"
+    },
+    "createdAt": 1765046691937,
+    "inStock": false,
+    "imgUrl": "https://robohash.org/Rx2SU?set=set4",
+    "labels": []
   }
 ]
