@@ -2,7 +2,7 @@
   {
     "_id": "t101",
     "name": "Talking Doll",
-    "imgUrl": "hardcoded-url-for-now",
+    "imgUrl": "https://www.freepik.com/free-psd/vintage-worn-teddy-bear-with-bow-tie_408644276.htm#fromView=keyword&page=1&position=13&uuid=76b4c6e5-12f6-4774-9944-60f0edfbd7b4&query=Toy+transparent+background",
     "price": 123,
     "labels": [
       "Doll",
@@ -13,30 +13,29 @@
     "inStock": true
   },
   {
-    "price": 173,
-    "speed": null,
-    "_id": "v5xhw",
+    "name": "TOY-940",
+    "price": 67,
+    "_id": "0gpG5",
     "owner": {
       "_id": "0fgfr",
       "fullname": "sasa sasa"
-    }
+    },
+    "createdAt": 1765044679992,
+    "inStock": false,
+    "imgUrl": "toy.png",
+    "labels": []
   },
   {
+    "name": "TOY-BOB",
     "price": 100,
-    "speed": null,
-    "_id": "BjZji",
+    "_id": "660cB",
     "owner": {
       "_id": "0fgfr",
       "fullname": "sasa sasa"
-    }
-  },
-  {
-    "price": 221,
-    "speed": null,
-    "_id": "b7KvH",
-    "owner": {
-      "_id": "0fgfr",
-      "fullname": "sasa sasa"
-    }
+    },
+    "createdAt": 1765044687888,
+    "inStock": true,
+    "imgUrl": "toy.png",
+    "labels": []
   }
 ]

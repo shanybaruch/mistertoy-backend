@@ -15,11 +15,8 @@ const toys = utilService.readJsonFile('data/toy.json')
 
 function query(filterBy = { txt: '' }) {
     const regex = new RegExp(filterBy.txt, 'i')
-    var toysToReturn = toys.filter(toy => regex.test(toy.vendor))
+    var toysToReturn = toys.filter(toy => regex.test(toy.name))
 
-    if (filterBy.minSpeed) {
-        toysToReturn = toysToReturn.filter(toy => toy.speed >= filterBy.minSpeed)
-    }
     if (filterBy.maxPrice) {
         toysToReturn = toysToReturn.filter(toy => toy.price <= filterBy.maxPrice)
     }
@@ -56,13 +53,16 @@ function save(toy, loggedinUser) {
             toyToUpdate.owner._id !== loggedinUser._id) {
             return Promise.reject('Not your toy')
         }
-        toyToUpdate.vendor = toy.vendor
-        toyToUpdate.speed = toy.speed
+        toyToUpdate.name = toy.name
         toyToUpdate.price = toy.price
         toy = toyToUpdate
     } else {
         toy._id = utilService.makeId()
         toy.owner = loggedinUser
+        toy.createdAt = Date.now()
+        toy.inStock = Math.random() < 0.5
+        toy.imgUrl = 'toy.png'
+        if (!toy.labels) toy.labels = []
         toys.push(toy)
     }
     delete toy.owner.score

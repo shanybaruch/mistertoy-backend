@@ -59,9 +59,8 @@ app.post('/api/toy', (req, res) => {
     if (!loggedinUser) return res.status(401).send('Cannot add toy')
 
     const toy = {
-        vendor: req.body.vendor,
+        name: req.body.name,
         price: +req.body.price,
-        speed: +req.body.speed,
     }
     toyService.save(toy, loggedinUser)
         .then(savedToy => res.send(savedToy))
@@ -77,9 +76,8 @@ app.put('/api/toy/:id', (req, res) => {
 
     const toy = {
         _id: req.params.id,
-        vendor: req.body.vendor,
+        name: req.body.name,
         price: +req.body.price,
-        speed: +req.body.speed,
     }
     toyService.save(toy, loggedinUser)
         .then(savedToy => res.send(savedToy))
