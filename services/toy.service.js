@@ -55,13 +55,18 @@ function save(toy, loggedinUser) {
         }
         toyToUpdate.name = toy.name
         toyToUpdate.price = toy.price
+        if (toy.imgUrl) toyToUpdate.imgUrl = toy.imgUrl 
+        
         toy = toyToUpdate
     } else {
         toy._id = utilService.makeId()
         toy.owner = loggedinUser
         toy.createdAt = Date.now()
         toy.inStock = Math.random() < 0.5
-        toy.imgUrl = 'toy.png'
+        
+        toy.imgUrl = toy.imgUrl || `https://robohash.org/${toy.name}?set=set4`
+       
+
         if (!toy.labels) toy.labels = []
         toys.push(toy)
     }
