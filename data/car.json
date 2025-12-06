@@ -1,0 +1,46 @@
+[
+  {
+    "vendor": "Susita-418",
+    "price": 1239,
+    "speed": 154,
+    "_id": "Du2qd",
+    "owner": {
+      "fullname": "admin",
+      "_id": "Uo93j",
+      "isAdmin": true
+    }
+  },
+  {
+    "vendor": "Susita-397",
+    "price": 879,
+    "speed": 96,
+    "_id": "fGOU1",
+    "owner": {
+      "fullname": "admin",
+      "_id": "Uo93j",
+      "isAdmin": true
+    }
+  },
+  {
+    "vendor": "Susita-343",
+    "price": 4129,
+    "speed": 112,
+    "_id": "xG98m",
+    "owner": {
+      "_id": "Uo93j",
+      "fullname": "admin",
+      "isAdmin": true
+    }
+  },
+  {
+    "vendor": "Susita-879",
+    "price": 7044,
+    "speed": 139,
+    "_id": "x0MfK",
+    "owner": {
+      "_id": "Uo93j",
+      "fullname": "admin",
+      "isAdmin": true
+    }
+  }
+]
