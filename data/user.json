@@ -34,5 +34,12 @@
     "fullname": "Bo Bo",
     "score": 10000,
     "_id": "3TyTi"
+  },
+  {
+    "username": "sasa",
+    "password": "sasa",
+    "fullname": "sasa sasa",
+    "score": 10000,
+    "_id": "0fgfr"
   }
 ]

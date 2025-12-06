@@ -32,7 +32,6 @@ app.set('query parser', 'extended')
 app.get('/api/toy', (req, res) => {
     const filterBy = {
         txt: req.query.txt || '',
-        minSpeed: +req.query.minSpeed || 0,
         maxPrice: +req.query.maxPrice || 0,
         pageIdx: req.query.pageIdx || undefined,
     }
