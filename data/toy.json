@@ -1,31 +1,5 @@
 [
   {
-    "name": "aninn",
-    "price": 100,
-    "_id": "QYoi9",
-    "owner": {
-      "_id": "0fgfr",
-      "fullname": "sasa sasa"
-    },
-    "createdAt": 1765055153371,
-    "inStock": false,
-    "imgUrl": "https://robohash.org/aninn?set=set4",
-    "labels": []
-  },
-  {
-    "name": "babbon",
-    "price": 50,
-    "_id": "cgj6S",
-    "owner": {
-      "_id": "0fgfr",
-      "fullname": "sasa sasa"
-    },
-    "createdAt": 1765055163371,
-    "inStock": false,
-    "imgUrl": "https://robohash.org/babbon?set=set4",
-    "labels": []
-  },
-  {
     "name": "Cookie",
     "price": 250,
     "_id": "vbd2G",
@@ -65,19 +39,6 @@
     "labels": []
   },
   {
-    "name": "joj",
-    "price": 53,
-    "_id": "h2bSK",
-    "owner": {
-      "_id": "0fgfr",
-      "fullname": "sasa sasa"
-    },
-    "createdAt": 1765140736421,
-    "inStock": false,
-    "imgUrl": "https://robohash.org/joj?set=set4",
-    "labels": []
-  },
-  {
     "name": "Bobi",
     "price": 50,
     "_id": "BQTgE",
@@ -88,19 +49,6 @@
     "createdAt": 1765197029035,
     "inStock": true,
     "imgUrl": "https://robohash.org/Bobi?set=set4",
-    "labels": []
-  },
-  {
-    "name": "ab",
-    "price": 160,
-    "_id": "Y7f5g",
-    "owner": {
-      "_id": "0fgfr",
-      "fullname": "sasa sasa"
-    },
-    "createdAt": 1765197073267,
-    "inStock": true,
-    "imgUrl": "https://robohash.org/ab?set=set4",
     "labels": []
   }
 ]

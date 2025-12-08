@@ -47,6 +47,10 @@ app.get('/api/toy', (req, res) => {
         })
 })
 
+app.get('/api/toy/labels', (req, res) => {
+    res.send(['On wheels', 'Box game', 'Art', 'Baby', 'Doll', 'Puzzle', 'Outdoor', 'Battery Powered'])
+})
+
 app.get('/api/toy/:toyId', (req, res) => {
     const { toyId } = req.params
 
