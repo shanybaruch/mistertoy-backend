@@ -30,6 +30,11 @@ app.set('query parser', 'extended')
 
 // REST API for Toys
 app.get('/api/toy', (req, res) => {
+   let labels = req.query.labels
+    if (typeof labels === 'string') {
+        labels = [labels]
+    }
+    
     const filterBy = {
         txt: req.query.txt || '',
         maxPrice: +req.query.maxPrice || 0,
@@ -37,7 +42,8 @@ app.get('/api/toy', (req, res) => {
        
         sortBy: req.query.sortBy,
         desc: req.query.desc,
-        inStock: req.query.inStock
+        inStock: req.query.inStock,
+        labels: labels
     }
     toyService.query(filterBy)
         .then(toys => res.send(toys))

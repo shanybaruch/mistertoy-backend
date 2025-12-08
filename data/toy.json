@@ -50,5 +50,22 @@
     "inStock": true,
     "imgUrl": "https://robohash.org/Bobi?set=set4",
     "labels": []
+  },
+  {
+    "name": "Toy 450",
+    "price": 152,
+    "labels": [
+      "Doll",
+      "Art",
+      "Baby"
+    ],
+    "inStock": true,
+    "_id": "0w92x",
+    "owner": {
+      "_id": "0fgfr",
+      "fullname": "sasa sasa"
+    },
+    "createdAt": 1765215522503,
+    "imgUrl": "https://robohash.org/Toy 450?set=set4"
   }
 ]
