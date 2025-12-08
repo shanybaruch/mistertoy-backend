@@ -20,7 +20,7 @@ function query(filterBy = { txt: '' }) {
     if (filterBy.maxPrice) {
         toysToReturn = toysToReturn.filter(toy => toy.price <= filterBy.maxPrice)
     }
-    if (filterBy.inStock) {
+    if (filterBy.inStock === 'true') {
         toysToReturn = toysToReturn.filter(toy => toy.inStock)
     }
     if (filterBy.sortBy) {
@@ -32,12 +32,16 @@ function query(filterBy = { txt: '' }) {
             toysToReturn.sort((t1, t2) => t1.name.localeCompare(t2.name))
         }
     }
+    const maxPage = Math.ceil(toysToReturn.length / PAGE_SIZE)
+
     if (filterBy.pageIdx !== undefined) {
-        const startIdx = filterBy.pageIdx * PAGE_SIZE
+        const pageIdx = filterBy.pageIdx
+        const startIdx = pageIdx * PAGE_SIZE        
+      
         toysToReturn = toysToReturn.slice(startIdx, startIdx + PAGE_SIZE)
     }
-    
-    return Promise.resolve(toysToReturn)
+
+    return Promise.resolve({ toys: toysToReturn, maxPage })
 }
 
 function getById(toyId) {
