@@ -34,6 +34,10 @@ app.get('/api/toy', (req, res) => {
         txt: req.query.txt || '',
         maxPrice: +req.query.maxPrice || 0,
         pageIdx: req.query.pageIdx || undefined,
+       
+        sortBy: req.query.sortBy,
+        desc: req.query.desc,
+        inStock: req.query.inStock
     }
     toyService.query(filterBy)
         .then(toys => res.send(toys))
@@ -59,6 +63,7 @@ app.post('/api/toy', (req, res) => {
     if (!loggedinUser) return res.status(401).send('Cannot add toy')
 
     const toy = {
+        ...req.body,
         name: req.body.name,
         price: +req.body.price,
     }
@@ -75,6 +80,7 @@ app.put('/api/toy/:id', (req, res) => {
     if (!loggedinUser) return res.status(401).send('Cannot update toy')
 
     const toy = {
+        ...req.body,
         _id: req.params.id,
         name: req.body.name,
         price: +req.body.price,

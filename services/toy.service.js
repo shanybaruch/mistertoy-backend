@@ -18,17 +18,25 @@ function query(filterBy = { txt: '' }) {
     var toysToReturn = toys.filter(toy => regex.test(toy.name))
 
     if (filterBy.maxPrice) {
-        toysToReturn = toysToReturn.filter(toy => toy.price <= filterBy.maxPrice)
+        toysToReturn = toysToReturn.filter(toy => toy.price <= +filterBy.maxPrice)
     }
     if (filterBy.inStock === 'true') {
-        toysToReturn = toysToReturn.filter(toy => toy.inStock)
+        toysToReturn = toysToReturn.filter(toy => toy.inStock === true)
     }
+    if (filterBy.inStock === 'false') {
+        toysToReturn = toysToReturn.filter(toy => toy.inStock === false)
+    }
+
+    const desc = +filterBy.desc || 1
+
+    console.log('filterBy: ', filterBy);
+
     if (filterBy.sortBy) {
         if (filterBy.sortBy === 'price') {
             toysToReturn.sort((t1, t2) => t1.price - t2.price)
         } else if (filterBy.sortBy === 'createdAt') {
             toysToReturn.sort((t1, t2) => t1.createdAt - t2.createdAt)
-        } else if (filterBy.sortBy === 'txt') {
+        } else if (filterBy.sortBy === 'name') {
             toysToReturn.sort((t1, t2) => t1.name.localeCompare(t2.name))
         }
     }
@@ -36,8 +44,8 @@ function query(filterBy = { txt: '' }) {
 
     if (filterBy.pageIdx !== undefined) {
         const pageIdx = filterBy.pageIdx
-        const startIdx = pageIdx * PAGE_SIZE        
-      
+        const startIdx = pageIdx * PAGE_SIZE
+
         toysToReturn = toysToReturn.slice(startIdx, startIdx + PAGE_SIZE)
     }
 
@@ -76,7 +84,7 @@ function save(toy, loggedinUser) {
         toy = toyToUpdate
     } else {
         toy._id = utilService.makeId()
-        toy.owner = loggedinUser
+        toy.owner = loggedinUser || { fullname: 'Guest', _id: 'guest123' }
         toy.createdAt = Date.now()
         toy.inStock = Math.random() < 0.5
 
