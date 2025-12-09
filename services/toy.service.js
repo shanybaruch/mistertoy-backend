@@ -26,9 +26,9 @@ function query(filterBy = { txt: '' }) {
     if (filterBy.inStock === 'false') {
         toysToReturn = toysToReturn.filter(toy => toy.inStock === false)
     }
-if (filterBy.labels && filterBy.labels.length > 0) {
+    if (filterBy.labels && filterBy.labels.length > 0) {
         toysToReturn = toysToReturn.filter(toy => {
-            const toyLabels = toy.labels || [] 
+            const toyLabels = toy.labels || []
             return toyLabels.some(label => filterBy.labels.includes(label))
         })
     }

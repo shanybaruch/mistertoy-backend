@@ -30,16 +30,16 @@ app.set('query parser', 'extended')
 
 // REST API for Toys
 app.get('/api/toy', (req, res) => {
-   let labels = req.query.labels
+    let labels = req.query.labels
     if (typeof labels === 'string') {
         labels = [labels]
     }
-    
+
     const filterBy = {
         txt: req.query.txt || '',
         maxPrice: +req.query.maxPrice || 0,
         pageIdx: req.query.pageIdx || undefined,
-       
+
         sortBy: req.query.sortBy,
         desc: req.query.desc,
         inStock: req.query.inStock,
@@ -76,6 +76,7 @@ app.post('/api/toy', (req, res) => {
         ...req.body,
         name: req.body.name,
         price: +req.body.price,
+        labels: req.body.labels
     }
     toyService.save(toy, loggedinUser)
         .then(savedToy => res.send(savedToy))
@@ -94,6 +95,7 @@ app.put('/api/toy/:id', (req, res) => {
         _id: req.params.id,
         name: req.body.name,
         price: +req.body.price,
+        labels: req.body.labels
     }
     toyService.save(toy, loggedinUser)
         .then(savedToy => res.send(savedToy))

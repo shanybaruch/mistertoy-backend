@@ -52,8 +52,8 @@
     "labels": []
   },
   {
-    "name": "Toy 450",
-    "price": 152,
+    "name": "Baby Toy",
+    "price": 110,
     "labels": [
       "Doll",
       "Art",
@@ -67,5 +67,22 @@
     },
     "createdAt": 1765215522503,
     "imgUrl": "https://robohash.org/Toy 450?set=set4"
+  },
+  {
+    "name": "My Toy",
+    "price": 150,
+    "labels": [
+      "Doll",
+      "Art",
+      "Baby"
+    ],
+    "inStock": true,
+    "_id": "hESnL",
+    "owner": {
+      "_id": "0fgfr",
+      "fullname": "sasa sasa"
+    },
+    "createdAt": 1765222992774,
+    "imgUrl": "https://robohash.org/Toy 729?set=set4"
   }
 ]
