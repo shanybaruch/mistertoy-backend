@@ -43,7 +43,7 @@ app.get('/api/toy', (req, res) => {
         sortBy: req.query.sortBy,
         desc: req.query.desc,
         inStock: req.query.inStock,
-        labels: labels
+        labels: req.query.labels
     }
     toyService.query(filterBy)
         .then(toys => res.send(toys))

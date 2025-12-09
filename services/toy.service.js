@@ -85,8 +85,8 @@ function save(toy, loggedinUser) {
         }
         toyToUpdate.name = toy.name
         toyToUpdate.price = toy.price
+        toyToUpdate.labels = toy.labels
         if (toy.imgUrl) toyToUpdate.imgUrl = toy.imgUrl
-
         toy = toyToUpdate
     } else {
         toy._id = utilService.makeId()

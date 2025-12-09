@@ -55,9 +55,7 @@
     "name": "Baby Toy",
     "price": 110,
     "labels": [
-      "Doll",
-      "Art",
-      "Baby"
+      "Box game"
     ],
     "inStock": true,
     "_id": "0w92x",
