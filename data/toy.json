@@ -1,7 +1,7 @@
 [
   {
     "name": "Cookie",
-    "price": 250,
+    "price": 255,
     "_id": "vbd2G",
     "owner": {
       "_id": "gHKWY",
@@ -10,7 +10,9 @@
     "createdAt": 1765134738728,
     "inStock": false,
     "imgUrl": "https://robohash.org/Cookie?set=set4",
-    "labels": []
+    "labels": [
+      "Puzzle"
+    ]
   },
   {
     "name": "Puki",
@@ -23,7 +25,13 @@
     "createdAt": 1765134813914,
     "inStock": false,
     "imgUrl": "https://robohash.org/Puki?set=set4",
-    "labels": []
+    "labels": [
+      "On wheels",
+      "Box game",
+      "Puzzle",
+      "Outdoor",
+      "Battery Powered"
+    ]
   },
   {
     "name": "Pacho",
@@ -36,7 +44,9 @@
     "createdAt": 1765134921764,
     "inStock": false,
     "imgUrl": "https://robohash.org/Pacho?set=set4",
-    "labels": []
+    "labels": [
+      "Art"
+    ]
   },
   {
     "name": "Bobi",
@@ -49,7 +59,11 @@
     "createdAt": 1765197029035,
     "inStock": true,
     "imgUrl": "https://robohash.org/Bobi?set=set4",
-    "labels": []
+    "labels": [
+      "Puzzle",
+      "Outdoor",
+      "Battery Powered"
+    ]
   },
   {
     "name": "Baby Toy",

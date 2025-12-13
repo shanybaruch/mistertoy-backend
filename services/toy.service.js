@@ -46,16 +46,18 @@ function query(filterBy = { txt: '' }) {
             toysToReturn.sort((t1, t2) => t1.name.localeCompare(t2.name))
         }
     }
+    const totalCount = toysToReturn.length
+
     const maxPage = Math.ceil(toysToReturn.length / PAGE_SIZE)
 
     if (filterBy.pageIdx !== undefined) {
-        const pageIdx = filterBy.pageIdx
+        const pageIdx = +filterBy.pageIdx
         const startIdx = pageIdx * PAGE_SIZE
 
         toysToReturn = toysToReturn.slice(startIdx, startIdx + PAGE_SIZE)
     }
 
-    return Promise.resolve({ toys: toysToReturn, maxPage })
+    return Promise.resolve({ toys: toysToReturn, maxPage, totalCount })
 }
 
 function getById(toyId) {
@@ -86,6 +88,7 @@ function save(toy, loggedinUser) {
         toyToUpdate.name = toy.name
         toyToUpdate.price = toy.price
         toyToUpdate.labels = toy.labels
+        toyToUpdate.inStock = toy.inStock
         if (toy.imgUrl) toyToUpdate.imgUrl = toy.imgUrl
         toy = toyToUpdate
     } else {
