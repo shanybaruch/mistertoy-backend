@@ -10,7 +10,7 @@ export const toyService = {
     save
 }
 
-const PAGE_SIZE = 4
+const PAGE_SIZE = 8
 const toys = utilService.readJsonFile('data/toy.json')
 
 function query(filterBy = { txt: '' }) {
