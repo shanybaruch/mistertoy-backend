@@ -99,12 +99,12 @@
   },
   {
     "name": "Toy 768",
-    "price": 57,
+    "price": 60,
     "labels": [
       "Box game",
       "On wheels"
     ],
-    "inStock": false,
+    "inStock": true,
     "_id": "wHxzu",
     "owner": {
       "_id": "gHKWY",
